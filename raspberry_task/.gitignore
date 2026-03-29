@@ -1,0 +1,13 @@
+# Ignore virtual environments
+venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore data outputs
+*.h5
+*.tflite
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
