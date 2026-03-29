@@ -1,0 +1,22 @@
+# Ignore virtual environments
+venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore data outputs
+*.h5
+*.tflite
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore environment secrets
+.env
+
+# Data folder (too large for git)
+data/
+
+# OS files
+.DS_Store
