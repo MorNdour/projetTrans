@@ -2,29 +2,11 @@ import albumentations as A
 import cv2
 import numpy as np
 from torch.utils.data import Dataset
+import tensorflow as tf
+from tensorflow.keras import models, layers
 
-class TomatoDataset(Dataset):
 
-    def __init__(self, image_paths, labels, transform=None):
-        self.image_paths = image_paths
-        self.labels = labels
-        self.transform = transform
 
-    def __len__(self):
-        return len(self.image_paths)
-
-    def __getitem__(self, idx):
-
-        img = cv2.imread(self.image_paths[idx])
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
-        if self.transform:
-            augmented = self.transform(image=img)
-            img = augmented["image"]
-
-        label = self.labels[idx]
-
-        return img, label
 
 def remove_background(image_path):
     """Removes background from an image using HSV color space 
@@ -51,6 +33,12 @@ def remove_background(image_path):
 
     return result_rgb
 
+IMAGE_SIZE = 256  # or your desired size
+
+resize_and_rescale = tf.keras.Sequential([
+    tf.keras.layers.Resizing(IMAGE_SIZE, IMAGE_SIZE),
+    tf.keras.layers.Rescaling(1./255),
+])
 
 train_transform = A.Compose([
     A.Resize(256,256),

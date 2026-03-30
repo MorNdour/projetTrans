@@ -27,5 +27,15 @@ def train():
     return model
 
 
-if __name__ == '__main__':
-    train()
+def split_data(dataset, train_split=0.8, shuffle=True):
+    dataset_size = len(dataset)
+
+    if shuffle:
+        dataset = dataset.shuffle(dataset_size, seed=12)
+
+    train_size = int(train_split * dataset_size)
+
+    train_dataset = dataset.take(train_size)
+    val_dataset = dataset.skip(train_size)
+
+    return train_dataset, val_dataset

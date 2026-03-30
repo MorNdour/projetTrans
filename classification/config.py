@@ -25,9 +25,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 TRAIN_DIR = os.path.join(DATA_DIR, 'train')
 VAL_DIR = os.path.join(DATA_DIR, 'val')
-MODEL_SAVE_PATH = os.path.join(BASE_DIR, 'cnn_model_save.h5')
-TFLITE_MODEL_PATH = os.path.join(BASE_DIR, 'tf_lite_model.tflite')
-IMAGE_PREDICTION_DIR = os.path.join(BASE_DIR, 'image_prediction')
 
 # ──────────────────── Firebase (from env vars) ────────────────────
 FIREBASE_CONFIG = {

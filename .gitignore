@@ -4,6 +4,6 @@ agritech/
 AppTrans1/
 image/
 
-raspberry_task/data/
+classification/data/
 .env
 *cache*
