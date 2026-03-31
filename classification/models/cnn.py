@@ -1,6 +1,5 @@
-# CNN model definition
-
 from tensorflow.keras import models, layers
+
 
 def build_cnn(input_shape, n_classes):
     model = models.Sequential([
