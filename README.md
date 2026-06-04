@@ -9,6 +9,7 @@ This project tackles the classification of tomato leaf diseases using image data
 - Prepared and preprocessed a labeled dataset of tomato leaf images.
 - Trained a Convolutional Neural Network (CNN) to recognize and classify disease categories from images.
 - Evaluated the CNN's performance using a confusion matrix and classification report (see notebook for details).
+- Post-training quantization. [See report](https://www.researchgate.net/publication/404732965_Post-Training_Quantization_and_Core_ML_Deployment_of_a_Tomato_Disease_Classifier_for_On-Device_Inference)
 
 ---
 
