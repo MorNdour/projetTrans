@@ -1,0 +1,9 @@
+note.txt
+
+agritech/
+AppTrans1/
+image/
+
+classification/data/
+.env
+*cache*
